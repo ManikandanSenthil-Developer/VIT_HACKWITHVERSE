@@ -30,10 +30,11 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS middleware configuration with explicit origin whitelisting
+# CORS middleware configuration with explicit origin whitelisting & deployed regex
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.BACKEND_CORS_ORIGINS,
+    allow_origin_regex=r"https?://.*",
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allow_headers=["*"],
