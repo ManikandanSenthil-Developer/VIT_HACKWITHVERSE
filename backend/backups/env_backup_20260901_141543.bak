@@ -1,0 +1,8 @@
+# Database configuration (Set to postgresql://user:pass@localhost:5432/mats for PostgreSQL)
+DATABASE_URL=sqlite:///./mats.db
+
+# Authentication secrets
+JWT_SECRET=mats_super_secret_jwt_key_phase1_2026
+JWT_REFRESH_SECRET=mats_super_secret_refresh_key_phase1_2026
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+REFRESH_TOKEN_EXPIRE_DAYS=7
